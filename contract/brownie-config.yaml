@@ -1,0 +1,19 @@
+dotenv: .env
+networks:
+    development:
+        verify_flag: False
+    rinkeby:        
+        verify_flag: True
+    kovan:        
+        verify_flag: True
+    polygon-mumbai:
+        verify_flag: True
+wallets:
+    from_key: ${PRIVATE_KEY}
+dependencies:
+  # - <organization/repo>@<version>
+  - OpenZeppelin/openzeppelin-contracts@4.0.0
+compiler:
+  solc:
+    remappings:
+      - "@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.0.0"
